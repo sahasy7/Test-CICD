@@ -17,9 +17,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirement.txt
       - name: Test with pytest
-        run: python -m pytest ./tests
-        
- docker:
+        run: python -m pytest ./tests  
+
+  docker:
     needs: test
     runs-on: ubuntu-latest
     steps:
